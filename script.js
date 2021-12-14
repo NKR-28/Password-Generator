@@ -1,37 +1,50 @@
-function generatePassword() {
-    
-    document.getElementById("CheckTheBox");
+// Assignment Code
+var generateBtn = document.querySelector("#generate");
 
-const character = {
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+
+}
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
+
+var character = {
     symbol = "!@#$%&*?+^<>/[\|-",
     number = "0123456789",
     upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
     lowerCase = "abcdefghijklmnopqrstuvwxyz",
 }
 
-//Array Methods
+document.getElementById("generate");
 
-function symbol() {
-    return character.symbol[Math.floor(Math.random() * character.symbol.length)];
+let generate = prompt("How many characters would you like your password to include");
+let text;
+if (generate == null || generate == "") {
+    text = "User cancelled the prompt.";
+} else {
+    text = "Hello" + generate + "How are you today?";
 }
-function number() {
-    return character.number[Math.floor(Math.random() * character.number.length)];
+
+console.log(alert("A message"));
+console.log(prompt("Give me some info"));
+console.log(confirm("A yes / no choice"));
+
+function generatePassword() {
+    var password = "";
+
+    password += "a";
+    password += "r";
+    password += "]";
+
+    return password;
 }
-function upperCase() {
-    return character.lowerCase[Math.floor(Math.random() * character.upperCase.length)];
-}
-function lowerCase() {
-    return character.lowerCase[Math.floor(Math.random() * character.lowerCase.length)];
-};
 
-form.addEventListener("submit" , e => {
-    e.preventDefault()
-});
-
-const password = generatePassword(includeSymbols, includeNumbers, includeUpperCase, includeLowerCase)};
-
-function syncCharacter(e) {
-    const value = e.target.value
-    characterSymbol.value = value
-    
+function writePassword() {
+    var password = generatePassword();
+    var passwordText = document.querySelector("#password");
 }
